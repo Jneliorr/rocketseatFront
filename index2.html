@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard Faturamento</title>
+    <style>
+      /* Reset básico */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        /* Estilizando o fundo */
+        background-color: #f0f2f5;
+        border: 1px solid rgba(0, 238, 255, 0.237);
+        height: 100vh; /* Garante que o fundo ocupe a tela toda */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        color: rgb(0, 0, 0);
+      }
+      /* O CONTAINER DO CARD */
+      .card {
+        width: 300px;
+        height: 180px;
+        background: #ffffff;
+        border: 1px solid rgba(0, 200, 255, 0.2);
+        border-radius: 15px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+
+        position: relative; /* ESSENCIAL: para o #name_dado se basear no card, não na tela */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #name_dado {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        /* Removi o padding exagerado para não empurrar o texto */
+      }
+
+      #name_dado p {
+        font-size: 22px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        color: #666; /* Cor levemente cinza para o rótulo */
+      }
+      .valor_dado {
+        font-size: 16px;
+        font-weight: bold;
+        color: #333;
+        position: absolute; /* Posicionamento livre dentro do card */
+        bottom: 150px; /* Distância do fundo */
+        right: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="card">
+      <div id="name_dado">
+        <p>Faturamento</p>
+      </div>
+      <div class="valor_dado">R$ 15.000,00</div>
+    </div>
+  </body>
+</html>
